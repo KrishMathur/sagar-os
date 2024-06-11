@@ -42,6 +42,8 @@ def os_home(wallpaper_str,color):
 
     power_0 = pygame.image.load("graphics/battery/batery_0.png")
     power_0 = pygame.transform.scale(power_0,(50,50))
+
+    battery_level = random.randint(1,4)
     #---------------------------------------------------------------------------------
 
 
@@ -101,11 +103,11 @@ def os_home(wallpaper_str,color):
         #-------------------------------------------------
         battery_level = random.randint(1,1000000)
 
-        if 1 <= battery_level <= 200000:
+        if 1 == battery_level:
               window.blit(power_full,(1400,power_y))
-        elif 200001 <= battery_level <= 400000:
+        elif 2 == battery_level:
               window.blit(power_75,(1400,power_y))
-        elif 400001 <= battery_level <= 800000:
+        elif 3 == battery_level:
               window.blit(power_50,(1400,power_y))
         else:
               window.blit(power_0,(1400,power_y))
