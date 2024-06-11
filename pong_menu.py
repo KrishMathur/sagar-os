@@ -1,8 +1,9 @@
 import pygame
 import sys
 def ping_pong_menu(wallpaper_str,color):
-    
+    from pygame import mixer
     pygame.init()
+    mixer.init()
     SCREENx , SCREENy = 1500,1000
     window = pygame.display.set_mode((SCREENx,SCREENy)) 
     pygame.display.set_caption('PONG MENU')
@@ -36,9 +37,13 @@ def ping_pong_menu(wallpaper_str,color):
     
 
 
+    if not mixer.music.get_busy():
+        menu_music = mixer.music.load("graphics/pong/menu_music.MP3")
+        mixer.music.play(-1)
 
     run = True
     while run:
+
         mousex,mousey = pygame.mouse.get_pos()
         window.blit(bg,(0,0))
 
@@ -52,14 +57,18 @@ def ping_pong_menu(wallpaper_str,color):
 
                     if (10 <= mousex < 10 + back.get_width() and 
                         10 <= mousey < 10 + back.get_height()):
+                            mixer.music.stop()
                             sagar_explorer.search_window(wallpaper_str,color)
+             
 
                     if instructions_rect.collidepoint(pygame.mouse.get_pos()):
                         pong_inst.pong_inst(wallpaper_str,color)
+   
                         
                         
                     if menu_rect.collidepoint(pygame.mouse.get_pos()):
                         pong_diff.pong_diff_sel(wallpaper_str,color)
+       
         
 
         
