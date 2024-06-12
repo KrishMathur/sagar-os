@@ -48,6 +48,8 @@ def task_colorr(wallpaper_str,color):
                 #--------------------------------------------------------------------------BUTTONS 
                 if (400 <= mousex <= 400 + yellow_b.get_width() and       #YELLOW BUTTON      
                    400 <= mousey <= 400 + yellow_b.get_height()):
+                   click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                   click.play()
                    color = yellow
                    homepage.os_home(wallpaper_str,color)
                    
@@ -55,19 +57,25 @@ def task_colorr(wallpaper_str,color):
 
                 if (900 <= mousex <= 900 + red_b.get_width() and #RED BUTTON
                     400 <= mousey <= 400 + red_b.get_height()):
+                      click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                      click.play()
                       color = red
                       homepage.os_home(wallpaper_str,color)
                 
                 if (400 <= mousex <= 400 + green_b.get_width()and #GREEN BUTTON
                     650 <= mousey <= 650 + green_b.get_height()):
+                      click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                      click.play()
                       color = green
                       homepage.os_home(wallpaper_str,color)
                 
                 if (900 <= mousex <= 900 + transparent_b.get_width() and       #TRANSPARENT BUTTON      
                    650 <= mousey <= 650 + transparent_b.get_height()):
-                   color = transparent
-                   homepage.os_home(wallpaper_str,color)
-
+                    click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                    click.play()
+                    color = transparent
+                    homepage.os_home(wallpaper_str,color)
+ 
                 if (1480 - close_window.get_width() <= mousex <= 1480 and  #CLOSE WINDOW BUTTON
                     20 <= mousey <= 20 + close_window.get_height()):
                     exit = mixer.Sound("graphics/exit.mp3")

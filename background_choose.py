@@ -54,27 +54,39 @@ def bg_chooser(wallpaper_str,color):
             if event.type == pygame.MOUSEBUTTONDOWN:
                 #---------------------------------------------------------------------------------------------------------------BUTON CLICKS FOR THE WALLLPAPER
                 if 200 <= mousex <= 200 + wp1_b.get_width() and 400 <= mousey <= 400 + wp1_b.get_height():
+                    click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                    click.play()
                     wallpaper_str = "graphics/WALLPAPERS/WP1.jpg"
                     homepage.os_home(wallpaper_str,color)
                     
                     
                 if 600 <= mousex <= 600 + wp2_b.get_width() and 400 <= mousey <= 400 + wp2_b.get_height():
+                    click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                    click.play()
                     wallpaper_str = "graphics/WALLPAPERS/WP2.jpg"
                     homepage.os_home(wallpaper_str,color)
                 
                 if 1000 <= mousex <= 1000 + wp3_b.get_width() and 400 <= mousey <= 400 + wp3_b.get_height():
+                    click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                    click.play()
                     wallpaper_str =  "graphics/WALLPAPERS/WP3.jpg"
                     homepage.os_home(wallpaper_str,color)
                 
                 if 200 <= mousex <= 200 + wp4_b.get_width() and 700 <= mousey <= 700 + wp4_b.get_height():
+                    click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                    click.play()
                     wallpaper_str =  "graphics/WALLPAPERS/WP4.jpg"
                     homepage.os_home(wallpaper_str,color)
                     
                 if 600 <= mousex <= 600 + wp5_b.get_width() and 700 <= mousey <= 700 + wp5_b.get_height():
+                    click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                    click.play()
                     wallpaper_str =  "graphics/WALLPAPERS/WP5.jpg"
                     homepage.os_home(wallpaper_str,color)
                 
                 if 1000 <= mousex <= 1000 + wp6_b.get_width() and 700 <= mousey <= 700 + wp6_b.get_height():
+                    click = mixer.Sound("graphics/SETTINGSAPP/confirm.mp3")
+                    click.play()
                     wallpaper_str =  "graphics/WALLPAPERS/WP6.jpg"
                     homepage.os_home(wallpaper_str,color)
                 #----------------------------------------------------------------------------------------------------------------#BUTTON CLICK FOR CLOSE WINDOW
