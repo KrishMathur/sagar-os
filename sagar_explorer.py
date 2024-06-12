@@ -10,6 +10,8 @@ def search_window(wallpaper_str,color):
     import searches
     global searchable
 
+    from pygame import mixer
+
 
     pygame.init()
     window = pygame.display.set_mode((1500, 1000 ))
@@ -75,11 +77,14 @@ def search_window(wallpaper_str,color):
 
                 if (1480 - close_window.get_width() <= mousex <= 1480 and  #CLOSE WINDOW BUTTON
                     20 <= mousey <= 20 + close_window.get_height()):
+                    exit = mixer.Sound("graphics/exit.mp3")
+                    exit.play()
                     homepage.os_home(wallpaper_str,color)
                 
                 if (760 - acceptable_search.get_width() / 2 <= mousex <= 760 + acceptable_search.get_width() / 2 and 
-                    650 <= mousey <= 630 + acceptable_search.get_height()):
-                    print("bruh")
+                    650 <= mousey <= 630 + acceptable_search.get_height()): #ACCEPTABLE SEARCHES
+                    click = mixer.Sound("graphics/SETTINGSAPP/button_click.mp3")
+                    click.play()
                     searches.searches(wallpaper_str, color)
                      
 
