@@ -8,6 +8,7 @@ def bg_chooser(wallpaper_str,color):
     global wp1,wallpaper,run
     import os_settings
     import homepage
+    from pygame import mixer
 
     pygame.init()
     window = pygame.display.set_mode((1500, 1000 )) 
@@ -79,6 +80,8 @@ def bg_chooser(wallpaper_str,color):
                 #----------------------------------------------------------------------------------------------------------------#BUTTON CLICK FOR CLOSE WINDOW
                 if (1480 - close_window.get_width() <= mousex <= 1480 and  #CLOSE WINDOW BUTTON
                     20 <= mousey <= 20 + close_window.get_height()):
+                    exit = mixer.Sound("graphics/exit.mp3")
+                    exit.play()
                     os_settings.os_setting(wallpaper_str,color)
                 #----------------------------------------------------------------------------------------------------------------    
 

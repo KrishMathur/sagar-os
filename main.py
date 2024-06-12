@@ -1,10 +1,12 @@
 import pygame
 from moviepy.editor import VideoFileClip
 from time import sleep
+from pygame import mixer
 
 
 
 pygame.init()
+mixer.init()
 info = pygame.display.Info() 
 screen_width, screen_height = info.current_w, info.current_h
 window = pygame.display.set_mode((1500, 1000 ))
@@ -51,8 +53,10 @@ while run:
             sleep_state = "RUNNING" 
             pygame.display.flip()
     
-        if sleep_state == "RUNNING":
-            import homepage 
+        if sleep_state == "RUNNING": 
+            opensound = mixer.Sound('graphics/home_load.mp3')
+            opensound.play()
+            import homepage
             homepage.os_home()
             pygame.display.flip()
             run = False

@@ -4,8 +4,11 @@ from time import sleep
 def task_colorr(wallpaper_str,color):
 
     import homepage
+    import os_settings
+    from pygame import mixer
     #----------------------------------------------LOAD WINDOW 
     pygame.init()
+    mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
     #----------------------------------------------
     pygame.display.set_caption('Taskbar Color')
@@ -67,7 +70,9 @@ def task_colorr(wallpaper_str,color):
 
                 if (1480 - close_window.get_width() <= mousex <= 1480 and  #CLOSE WINDOW BUTTON
                     20 <= mousey <= 20 + close_window.get_height()):
-                    homepage.os_home(wallpaper_str,color)
+                    exit = mixer.Sound("graphics/exit.mp3")
+                    exit.play()
+                    os_settings.os_setting(wallpaper_str,color)
 
                 #--------------------------------------------------------------------------
             #--------------------------------------------

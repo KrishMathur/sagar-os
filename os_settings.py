@@ -11,7 +11,10 @@ def os_setting(wallpaper_str,color):
     import background_choose
     import task_color
 
+    from pygame import mixer 
+
     pygame.init()
+    mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
     #----------------------------------------------------------------- LOADING BUTTON IMAGES
     on_off = pygame.image.load("graphics/SETTINGSAPP/POWER.png")
@@ -52,26 +55,36 @@ def os_setting(wallpaper_str,color):
 
                 if (1480 - close_window.get_width() <= mousex <= 1480 and  #CLOSE WINDOW BUTTON
                     20 <= mousey <= 20 + close_window.get_height()):
+                    exit = mixer.Sound("graphics/exit.mp3")
+                    exit.play()
                     homepage.os_home(wallpaper_str,color)
                     
 
   
                 if (200 <= mousex <= 200 + on_off.get_width() and  # POWER BUTTON CLICKED
                     400 <= mousey <= 400 + on_off.get_height()):
+                    click = mixer.Sound("graphics/SETTINGSAPP/button_click.mp3")
+                    click.play()
                     turn_off.close_os(wallpaper_str,color)
 
 
                 if (1300 - taskbar_color.get_width() <= mousex <= 1300 and  #TASKBAR CLICKED 
                     400 <= mousey <= 400 + taskbar_color.get_height()):
+                    click = mixer.Sound("graphics/SETTINGSAPP/button_click.mp3")
+                    click.play()
                     task_color.task_colorr(wallpaper_str,color)
 
                 if (200 <= mousex <= 200 + wallpaperchooser.get_width() and # WALLPAPER CLICKED
                     600 <= mousey <= 600 + wallpaperchooser.get_height()):
+                    click = mixer.Sound("graphics/SETTINGSAPP/button_click.mp3")
+                    click.play()
                     background_choose.bg_chooser( "graphics/WALLPAPERS/WP1.jpg",color)
 
             
                 if (1300 - about_pc.get_width() <= mousex <= 1300 and # ABOUT PC CLICKED
                     600 <= mousey <= 600 + about_pc.get_height()):
+                        click = mixer.Sound("graphics/SETTINGSAPP/button_click.mp3")
+                        click.play()
                         pc_about.about_pc_window(wallpaper_str,color)
 
             

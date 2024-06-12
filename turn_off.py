@@ -5,6 +5,8 @@ from time import sleep
 
 def close_os(wallpaper_str,color):
     import homepage
+    from pygame import mixer    
+    import os_settings
 
     pygame.init()
     info = pygame.display.Info() 
@@ -42,7 +44,9 @@ def close_os(wallpaper_str,color):
                    
                 if (1480 - close_window.get_width() <= mousex <= 1480 and 
                 20 <= mousey <= 20 + close_window.get_height()):
-                    homepage.os_home(wallpaper_str,color)
+                    exit = mixer.Sound("graphics/exit.mp3")
+                    exit.play()
+                    os_settings.os_setting(wallpaper_str,color)
                     break
                     
             

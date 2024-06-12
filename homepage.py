@@ -8,6 +8,7 @@ def os_home(wallpaper_str,color):
     import turn_off
     import os_settings
     import sagar_explorer
+    from pygame import mixer 
 
     import random
     from random import randint
@@ -69,6 +70,8 @@ def os_home(wallpaper_str,color):
                
                 if (power_x <= mousex <= power_x+power.get_width() and #BUTTON DETECTION FOR POWER BUTTON
                     power_y <= mousey <= power_y + power.get_height()):
+                      click = mixer.Sound("graphics/APP ICONS/home_click.mp3")
+                      click.play()
                       turn_off.close_os(wallpaper_str,color)
                       run = False
                       
@@ -76,10 +79,14 @@ def os_home(wallpaper_str,color):
                 
                 if (settings_x <= mousex <= settings_x + settings.get_width() and #BUTTON DETECTION FOR SETTINGS BUTTON
                     settings_y <= mousey <= settings_y + settings.get_height()):
+                      click = mixer.Sound("graphics/APP ICONS/home_click.mp3")
+                      click.play()
                       os_settings.os_setting(wallpaper_str,color)
                       run = False
                 if (search_x <= mousex <= search_x + search.get_width() and #BUTTON DETECTION FOR SEARCH WINDOW
                     search_y <= mousey <= search_y + search.get_height()):
+                      click = mixer.Sound("graphics/APP ICONS/home_click.mp3")
+                      click.play()
                       sagar_explorer.search_window(wallpaper_str,color)
                       
                         

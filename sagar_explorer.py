@@ -154,4 +154,4 @@ def search_window(wallpaper_str,color):
         
 
 color = (194, 38, 45,0)
-search_window("graphics/WALLPAPERS/WP1.jpg",color)
+#search_window("graphics/WALLPAPERS/WP1.jpg",color)
