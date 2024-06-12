@@ -171,6 +171,7 @@ def ping_pong(wallpaper_str, color):
         win_1 = pygame.image.load("graphics/pong/1.png") 
         win_2 = pygame.image.load("graphics/pong/2.png") 
         if player1_score == 10:
+            pygame.mixer.music.pause()
             window.blit(win_1, (0, 0))
             gameover.play()
             pygame.display.flip()
@@ -178,7 +179,10 @@ def ping_pong(wallpaper_str, color):
             pong_menu.ping_pong_menu(wallpaper_str, color)
 
         if player2_score == 10:
+            pygame.mixer.music.pause()
             window.blit(win_2, (0, 0))
             gameover.play()
             pygame.display.flip()
             sleep(2)
+            pong_menu.ping_pong_menu(wallpaper_str, color)
+            

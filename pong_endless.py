@@ -61,13 +61,11 @@ def ping_pong_hard(wallpaper_str, color):
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mousex, mousey = pygame.mouse.get_pos()
                 
-                if (10 <= mousex < 10 + back.get_width() and 
+                if (10 <= mousex < 10 + back.get_width() and #GO BACK
                     10 <= mousey < 10 + back.get_height()):
                     pygame.mixer.music.pause()
                     music_playing = False 
                     pong_menu.ping_pong_menu(wallpaper_str, color)
-                    pygame.mixer.music.pause()
-                    music_playing = False 
             #----------------------------------------MOVEMENT VARIABLES GO
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_UP:
