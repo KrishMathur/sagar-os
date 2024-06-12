@@ -170,7 +170,7 @@ def ping_pong_med(wallpaper_str, color):
         win_1 = pygame.image.load("graphics/pong/1.png") 
         win_2 = pygame.image.load("graphics/pong/2.png") 
         gameover = mixer.Sound('graphics/pong/gameover.MP3')
-        if player1_score == 20:
+        if player1_score == 10:
             pygame.mixer.music.stop()
             window.blit(win_1, (0, 0))
             gameover.play()
@@ -178,7 +178,7 @@ def ping_pong_med(wallpaper_str, color):
             sleep(2)
             pong_menu.ping_pong_menu(wallpaper_str, color)
 
-        if player2_score == 20:
+        if player2_score == 10:
             pygame.mixer.music.stop()
             window.blit(win_2, (0, 0))
             gameover.play()
