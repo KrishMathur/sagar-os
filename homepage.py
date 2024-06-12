@@ -8,6 +8,7 @@ def os_home(wallpaper_str,color):
     import turn_off
     import os_settings
     import sagar_explorer
+    import spotify
     from pygame import mixer 
 
     import random
@@ -31,6 +32,9 @@ def os_home(wallpaper_str,color):
 
     search   = pygame.image.load("graphics/APP ICONS/search.png")
     search   = pygame.transform.scale(search,(50,50))
+
+    music = pygame.image.load("graphics/APP ICONS/music.png")
+    music = pygame.transform.scale(music,(50,50))
     #-----------------------------------------------------------------------------------BATTERY LEVELS
     power_full = pygame.image.load("graphics/battery/battery_full.png")
     power_full   = pygame.transform.scale(power_full,(50,50))
@@ -74,9 +78,6 @@ def os_home(wallpaper_str,color):
                       click.play()
                       turn_off.close_os(wallpaper_str,color)
                       run = False
-                      
-                      
-                
                 if (settings_x <= mousex <= settings_x + settings.get_width() and #BUTTON DETECTION FOR SETTINGS BUTTON
                     settings_y <= mousey <= settings_y + settings.get_height()):
                       click = mixer.Sound("graphics/APP ICONS/home_click.mp3")
@@ -88,6 +89,12 @@ def os_home(wallpaper_str,color):
                       click = mixer.Sound("graphics/APP ICONS/home_click.mp3")
                       click.play()
                       sagar_explorer.search_window(wallpaper_str,color)
+                if (music_x <= mousex <= music_x + music.get_width() and
+                     music_y <= mousey <= music_y + music.get_height()): 
+                          click = mixer.Sound("graphics/APP ICONS/home_click.mp3")
+                          click.play()
+                          spotify.spotify(wallpaper_str,color)
+                
                       
                         
                 
@@ -107,6 +114,10 @@ def os_home(wallpaper_str,color):
         search_x = power_x + 150 - search.get_width() #CALC BUTTONS FOR THE SEARCH ICON
         search_y = 950 - search.get_height() / 2
         window.blit(search,(search_x,search_y))
+        #------------------------------------------------- 
+        music_x = settings_x - 50 - music.get_width() #CALC BUTTONS FOR THE MUSIC ICON
+        music_y = 950 - music.get_height() / 2
+        window.blit(music,(music_x,music_y))
         #-------------------------------------------------
         battery_level = random.randint(1,1000000)
 

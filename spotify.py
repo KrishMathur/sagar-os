@@ -1,7 +1,9 @@
 import pygame 
 
-def spotify():
+def spotify(wallpaper_str,color):
     from pygame import mixer 
+    import homepage
+    import sagar_artist
     pygame.init()
     mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
@@ -38,7 +40,7 @@ def spotify():
                     20 <= mousey <= 20 + close_window.get_height()):
                     exit = mixer.Sound("graphics/exit.mp3")
                     exit.play()
-                    print("EXITING")
+                    homepage.os_home(wallpaper_str,color)
                 #--------------------------------------------------------------------------PLAY/PAUSE BUTTON
                 if (750 - 100 <= mousex <= 750 - 100 + play.get_width() and  #PLAY BUTTON
                     900 <= mousey <= 900 + play.get_height()):
@@ -55,7 +57,7 @@ def spotify():
                     500 <= mousey <= 500 + sagar.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    print("SAGAR")
+                    sagar_artist.sagar_artist(wallpaper_str,color)
                 if (180 <= mousex <= 180 + arijit.get_width() and  #ARIJIT ARTIST
                     600 <= mousey <= 600 + arijit.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
@@ -103,4 +105,5 @@ def spotify():
 
         pygame.display.flip()
 
-spotify()
+color = (194, 38, 45,0)
+#spotify("graphics/WALLPAPERS/WP1.jpg",color)
