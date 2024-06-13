@@ -4,6 +4,7 @@ def spotify(wallpaper_str,color):
     from pygame import mixer 
     import homepage
     import sagar_artist
+    import hadis_reckoning
     pygame.init()
     mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
@@ -73,7 +74,7 @@ def spotify(wallpaper_str,color):
                     500 <= mousey <= 500 + hadi_reckon.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    print("HADI RECKON")
+                    hadis_reckoning.hadis_reckoning(wallpaper_str,color)
                 if (960 <= mousex <= 960 + pyar_hai_meri_zindagi.get_width() and  #SHAH ALBUM
                     600 <= mousey <= 600 + pyar_hai_meri_zindagi.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
