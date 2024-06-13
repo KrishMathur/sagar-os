@@ -4,6 +4,7 @@ def sagar_artist(wallpaper_str, color):
     from pygame import mixer
     import spotify 
     import hadis_reckoning
+    import game_theoryy
     pygame.init()
     mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
@@ -40,6 +41,11 @@ def sagar_artist(wallpaper_str, color):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
                     hadis_reckoning.hadis_reckoning(wallpaper_str, color)
+                if (110 <= mousex <= 110 + game_theory.get_width() and
+                    550 <= mousey <= 550 + game_theory.get_height()):
+                    click = mixer.Sound("graphics/spotify/button_click.mp3")
+                    click.play()
+                    game_theoryy.game_theory_album(wallpaper_str, color)
         #--------------------------------------DISPLAY THE BACKGROUND
         window.blit(bg, (0,0))
         window.blit(back, (10, 10))
