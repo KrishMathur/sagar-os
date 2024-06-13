@@ -1,7 +1,7 @@
-import pygame
-from moviepy.editor import VideoFileClip
-from time import sleep
+import pygame 
 from pygame import mixer
+from time import sleep 
+
 
 
 
@@ -15,8 +15,11 @@ pygame.display.set_caption('Sagar Os')
 #-------------------------------------------------------- LOAD ON OFF PICTURES 
 turn_on = pygame.image.load('graphics/open_sq/power on.png')
 on  = pygame.image.load('graphics/open_sq/on 2.png')
+#--------------------------------------------------------RECT PROPETIRS 
+rec_width = 0
 #--------------------------------------------------------
-
+sagar = pygame.image.load('graphics/open_sq/sagar.png')
+#--------------------------------------------------------
 
 
 run = True
@@ -29,8 +32,7 @@ while run:
         if event.type == pygame.QUIT:
                     exit()
         
-
-        #----------------------------------------------CHECKS FOR MOUSE INPUT
+    #----------------------------------------------CHECKS FOR MOUSE INPUT
         if event.type == pygame.MOUSEBUTTONDOWN:
                 sleep_state = "ON"
         #-----------------------------------------------
@@ -45,27 +47,32 @@ while run:
               pygame.display.flip()
               sleep(1)
               sleep_state = "LOADING"
-
-
+            
+        
         if sleep_state == "LOADING":
-            loading_sagar_os = VideoFileClip('graphics/open_sq/SAGAR-OS_LOADSCRN.mp4')
-            loading_sagar_os.preview()
-            sleep_state = "RUNNING" 
-            pygame.display.flip()
-    
-        if sleep_state == "RUNNING": 
-            opensound = mixer.Sound('graphics/home_load.mp3')
-            opensound.play()
-            import homepage
-            homepage.os_home()
-            pygame.display.flip()
-            run = False
-         #-----------------------------------------------
-        
-        
-        
+            pygame.mixer.music.load('graphics/open_sq/loading_screen.MP3')
+            pygame.mixer.music.play()
+            while True:
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        exit()
 
+                if rec_width == 1400:
+                    sleep_state = "RUNNING"
+                    mixer.music.stop()
+                    opensound = mixer.Sound('graphics/home_load.mp3')
+                    opensound.play()
+                    import homepage
+                    homepage.os_home()
+                    
+                    
 
+                rec_width += 10
+                sleep(0.1)
+                window.fill((0, 0, 0))
+                pygame.draw.rect(window, (255, 255, 255), (50, 850, rec_width, 50))
+                window.blit(sagar, (750 - sagar.get_width() // 2 , 300))
+                pygame.display.flip()
 
 
 
