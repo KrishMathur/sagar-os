@@ -47,12 +47,12 @@ def spotify(wallpaper_str,color):
                     900 <= mousey <= 900 + play.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    print("PLAYING")
+                    mixer.music.unpause()
                 if (750 + 100 <= mousex <= 750 + 100 + pause.get_width() and  #PAUSE BUTTON
                     900 <= mousey <= 900 + pause.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    print("PAUSING")
+                    mixer.music.pause()
                 #--------------------------------------------------------------------------ARTISTS
                 if (180 <= mousex <= 180 + sagar.get_width() and  #SAGAR ARTIST
                     500 <= mousey <= 500 + sagar.get_height()):
