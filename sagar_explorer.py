@@ -62,6 +62,7 @@ def search_window(wallpaper_str,color):
                             if search_text == "TV" or search_text == "Gargtv" or search_text == "Youtube":
                                  youtube.youtube(wallpaper_str,color)
                             if search_text == "pong" or search_text == "Pong" or search_text == "Ping-Pong":
+                                pygame.mixer.music.stop()
                                 pong_menu.ping_pong_menu(wallpaper_str,color)
                         #-------------------------------------------------------------HANDLES THE INPUT FOR TYPING
                         if event.key == pygame.K_BACKSPACE:
