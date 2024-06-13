@@ -119,7 +119,6 @@ def os_home(wallpaper_str,color):
         music_y = 950 - music.get_height() / 2
         window.blit(music,(music_x,music_y))
         #-------------------------------------------------
-        battery_level = random.randint(1,1000000)
 
         if 1 == battery_level:
               window.blit(power_full,(1400,power_y))
