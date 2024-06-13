@@ -22,7 +22,7 @@ def sagar_artist(wallpaper_str, color):
     harvey = pygame.image.load("graphics/spotify/sagar_artist/harvey.png")
     #--------------------------------------TOP SONGS   
     hadis_lament = pygame.image.load("graphics/spotify/sagar_artist/hadis_reckon/lament.png")
-    bucket_clutch = pygame.image.load("graphics/spotify/sagar_artist/game_theory/bucket_clutch.png")
+    bad_piggies = pygame.image.load("graphics/spotify/sagar_artist/game_theory/bad_piggies.png")
     aura = pygame.image.load("graphics/spotify/sagar_artist/hadis_reckon/aura.png")
     #--------------------------------------
     #----------------------PLAY/PAUSE BUTTON
@@ -83,11 +83,11 @@ def sagar_artist(wallpaper_str, color):
                     mixer.music.load("graphics/spotify/sagar_artist/hadis_reckon/hadis_lament.mp3")
                     mixer.music.play()
 
-                if (890 <= mousex <= 890 + bucket_clutch.get_width() and 
-                    550 <= mousey <= 550 + bucket_clutch.get_height()):
+                if (890 <= mousex <= 890 + bad_piggies.get_width() and 
+                    550 <= mousey <= 550 + bad_piggies.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    mixer.music.load("graphics/spotify/sagar_artist/game_theory/bucket_clutch.MP3")
+                    mixer.music.load("graphics/spotify/sagar_artist/game_theory/Badd Little Piggies.MP3")
                     mixer.music.play()
                 
                 if (890 <= mousex <= 890 + aura.get_width() and
@@ -111,7 +111,7 @@ def sagar_artist(wallpaper_str, color):
         window.blit(harvey, (110, 650))
         #--------------------------------------DISPLAY TOP SONGS
         window.blit(hadis_lament, (890, 450))
-        window.blit(bucket_clutch, (890, 550))
+        window.blit(bad_piggies, (890, 550))
         window.blit(aura, (890, 650))
         #--------------------------------------
         pygame.display.flip()
