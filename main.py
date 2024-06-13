@@ -63,7 +63,7 @@ while run:
                     opensound = mixer.Sound('graphics/home_load.mp3')
                     opensound.play()
                     import homepage
-                    homepage.os_home()
+                    
                     
                     
 

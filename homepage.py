@@ -120,6 +120,7 @@ def os_home(wallpaper_str,color):
         window.blit(music,(music_x,music_y))
         #-------------------------------------------------
 
+
         if 1 == battery_level:
               window.blit(power_full,(1400,power_y))
         elif 2 == battery_level:

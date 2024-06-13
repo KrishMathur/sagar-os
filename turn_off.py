@@ -7,6 +7,7 @@ def close_os(wallpaper_str,color):
     import homepage
     from pygame import mixer    
     import os_settings
+    import sys 
 
     pygame.init()
     info = pygame.display.Info() 
@@ -54,5 +55,4 @@ def close_os(wallpaper_str,color):
                   window.blit(off,(0,0))
                   pygame.display.flip()
                   sleep(1)
-                  exit()
-
+                  sys.exit()
