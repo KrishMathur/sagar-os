@@ -52,23 +52,29 @@ def harvey_reginald(wallpaper_str,color):
                     sagar_artist.sagar_artist(wallpaper_str,color)
                 #------------------------------------------
                 #--------------------------------------------------------------------------------------------------MUSIC BUTTONS
-                if (750 - 200 <= mousex <= 750 - 200 + hrs.get_width() and  #A_THEORY BUTTON
+                if (750 - 200 <= mousex <= 750 - 200 + hrs.get_width() and  #greenback
                     450 <= mousey <= 450 + hrs.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    pygame.mixer.music.load("graphics/spotify/sagar_artist/harvey_specter/greenback.MP3")
+                    pygame.mixer.music.play()
                     
                     
 
-                if (750 - 200 <= mousex <= 750 - 200 + life_is_like_this.get_width() and  #BUCKET_CLUTCH BUTTON
+                if (750 - 200 <= mousex <= 750 - 200 + life_is_like_this.get_width() and  
                     550 <= mousey <= 550 + life_is_like_this.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    pygame.mixer.music.load("graphics/spotify/sagar_artist/harvey_specter/life.MP3")
+                    pygame.mixer.music.play()
                     
                     
                 if (750 - 200 <= mousex <= 750 - 200 + ps.get_width() and  # 
                     650 <= mousey <= 650 + ps.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    pygame.mixer.music.load("graphics/spotify/sagar_artist/harvey_specter/pearson.MP3")
+                    pygame.mixer.music.play()
                     
                 #--------------------------------------------------------------------------------------------------
 
