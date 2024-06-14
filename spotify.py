@@ -5,6 +5,7 @@ def spotify(wallpaper_str,color):
     import homepage
     import sagar_artist
     import hadis_reckoning
+    import krish_artist
     pygame.init()
     mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
@@ -14,12 +15,12 @@ def spotify(wallpaper_str,color):
     bg = pygame.image.load("graphics/spotify/bg.png")
     #----------------------LOAD ARTISTS 
     sagar = pygame.image.load("graphics/spotify/sagar.png")
-    arijit = pygame.image.load("graphics/spotify/arijit.png")
+    arijit = pygame.image.load("graphics/spotify/Krish Mathur.png")
     shah = pygame.image.load("graphics/spotify/shah.png")
     #----------------------LOAD ALBUMS
     hadi_reckon = pygame.image.load("graphics/spotify/HADI_album1.png")
     pyar_hai_meri_zindagi = pygame.image.load("graphics/spotify/shah_album1.png")
-    chill_hits = pygame.image.load("graphics/spotify/arijit_album1.png")
+    chill_hits = pygame.image.load("graphics/spotify/Chill hits.png")
     #----------------------CLOSE WINDOW BUTTON
     close_window = pygame.image.load("graphics/close_white.png") #LOAD CLOSE WINDOW BUTTON
     close_window = pygame.transform.scale(close_window,(50,50)) # SCALE IT SMALLER 
@@ -59,11 +60,11 @@ def spotify(wallpaper_str,color):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
                     sagar_artist.sagar_artist(wallpaper_str,color)
-                if (180 <= mousex <= 180 + arijit.get_width() and  #ARIJIT ARTIST
+                if (180 <= mousex <= 180 + arijit.get_width() and  #krish ARTIST
                     600 <= mousey <= 600 + arijit.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    print("ARIJIT")
+                    krish_artist.krish_artist(wallpaper_str,color)
                 if (180 <= mousex <= 180 + shah.get_width() and  #SHAH ARTIST
                     700 <= mousey <= 700 + shah.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
