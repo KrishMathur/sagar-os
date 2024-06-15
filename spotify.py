@@ -80,12 +80,11 @@ def spotify(wallpaper_str,color):
                     600 <= mousey <= 600 + pyar_hai_meri_zindagi.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    print("SHAH ALBUM")
                 if (960 <= mousex <= 960 + chill_hits.get_width() and  #ARIJIT ALBUM
                     700 <= mousey <= 700 + chill_hits.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    print("ARIJIT ALBUM")
+                    
                 #-------------------------------------------------------------------------------
         
         #--------------------------------------------------------------------------------------blit everything

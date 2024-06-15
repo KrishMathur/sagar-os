@@ -3,6 +3,9 @@ import pygame
 def krish_artist(wallpaper_str, color):
     from pygame import mixer
     import spotify 
+    import krish_chill
+    import krish_money
+    import krish_samosa
 
     pygame.init()
     mixer.init()
@@ -60,36 +63,46 @@ def krish_artist(wallpaper_str, color):
                     450 <= mousey <= 450 + chill.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    krish_chill.krish_chill_album(wallpaper_str, color)
+
                     
 
                 if (110 <= mousex <= 110 + money.get_width() and
                     550 <= mousey <= 550 + money.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    krish_money.krish_money_album(wallpaper_str, color)
                     
                 
                 if (110 <= mousex <= 110 + samosa.get_width() and
                     650 <= mousey <= 650 + samosa.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    krish_samosa.krish_samosa_album(wallpaper_str, color)
                     
                 #---------------------------------------------------------------------------------TOP SONGS
                 if (890 <= mousex <= 890 + lose_control.get_width() and
                     450 <= mousey <= 450 + lose_control.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    pygame.mixer_music.load("graphics/spotify/krish/CHILL/too_sweet.MP3")
+                    pygame.mixer_music.play()
                    
 
                 if (890 <= mousex <= 890 + tom_ford.get_width() and 
                     550 <= mousey <= 550 + tom_ford.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    pygame.mixer_music.load("graphics/spotify/krish/MONEY/sweet.MP3")
+                    pygame.mixer_music.play()
                     
                 
                 if (890 <= mousex <= 890 + badal.get_width() and
                     650 <= mousey <= 650 + badal.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    pygame.mixer_music.load("graphics/spotify/krish/SAMOSA/badal.MP3")
+                    pygame.mixer_music.play()
                   
                 #---------------------------------------------------------------------------------
 
