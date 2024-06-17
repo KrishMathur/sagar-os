@@ -90,6 +90,7 @@ def space_invade(wallpaper_str,color):
                 return False
 
     while True:
+        hit_bullet(enemyx[i], enemyy[i], player_bulletx, player_bullety)
         pygame.display.flip()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
