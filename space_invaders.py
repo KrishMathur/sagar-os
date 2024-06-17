@@ -141,8 +141,9 @@ def space_invade(wallpaper_str, color):
             window.blit(game_over, (650, 500))
             pygame.display.flip()
             sleep(2)
-            sagar_explorer.search_window(wallpaper_str, color)
             mixer.music.stop()
+            sagar_explorer.search_window(wallpaper_str, color)
+            
 
         window.blit(back, (0, 0))
         if b_stat == "fire":
