@@ -6,7 +6,7 @@ DATE: 10/10/2021
 import pygame 
 from pygame import mixer
 from time import sleep 
-
+import homepage
 
 
 
@@ -67,7 +67,9 @@ while run:
                     mixer.music.stop()
                     opensound = mixer.Sound('graphics/home_load.mp3')
                     opensound.play()
-                    import homepage
+                    color = (194, 38, 45,0)
+                    homepage.os_home("graphics/WALLPAPERS/WP1.jpg",color)
+                    
                     
                     
                     

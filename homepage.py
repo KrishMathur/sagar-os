@@ -136,5 +136,5 @@ def os_home(wallpaper_str,color):
 
 
 color = (194, 38, 45,0)
-os_home("graphics/WALLPAPERS/WP1.jpg",color)
+#os_home("graphics/WALLPAPERS/WP1.jpg",color)
 
