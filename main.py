@@ -62,19 +62,17 @@ while run:
                     if event.type == pygame.QUIT:
                         exit()
 
-                if rec_width == 1400:
+                if rec_width == 1370:
                     sleep_state = "RUNNING"
                     mixer.music.stop()
                     opensound = mixer.Sound('graphics/home_load.mp3')
                     opensound.play()
                     color = (194, 38, 45,0)
                     homepage.os_home("graphics/WALLPAPERS/WP1.jpg",color)
+                if rec_width < 1370:
+                     rec_width += 10
                     
                     
-                    
-                    
-
-                rec_width += 10
                 sleep(0.1)
                 window.fill((0, 0, 0))
                 pygame.draw.rect(window, (255, 255, 255), (50, 850, rec_width, 50))
