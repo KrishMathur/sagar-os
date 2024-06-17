@@ -66,7 +66,7 @@ def krish_samosa_album(wallpaper_str,color):
                     pygame.mixer_music.play()
               
 
-                    print("PONDER BUTTON PRESSED")
+                   
                 if (750 - 200 <= mousex <= 750 - 200 + badal.get_width() and  #LOSE BUTTON
                     650 <= mousey <= 650 + badal.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")

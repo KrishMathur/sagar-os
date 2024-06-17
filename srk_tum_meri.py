@@ -67,7 +67,6 @@ def srk_tum_meri_album(wallpaper_str,color):
                    
               
 
-                    print("PONDER BUTTON PRESSED")
                 if (750 - 200 <= mousex <= 750 - 200 + paagal.get_width() and  #LOSE BUTTON
                     650 <= mousey <= 650 + paagal.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")

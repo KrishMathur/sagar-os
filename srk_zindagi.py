@@ -69,7 +69,7 @@ def srk_zindagi_album(wallpaper_str,color):
                    
               
 
-                    print("PONDER BUTTON PRESSED")
+               
                 if (750 - 200 <= mousex <= 750 - 200 + manwa.get_width() and  
                     650 <= mousey <= 650 + manwa.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")

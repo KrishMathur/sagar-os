@@ -65,7 +65,7 @@ def hadis_reckoning(wallpaper_str,color):
                     mixer.music.load("graphics/spotify/sagar_artist/hadis_reckon/aura.mp3")
                     mixer.music.play()
 
-                    print("PONDER BUTTON PRESSED")
+                  
                 if (750 - 200 <= mousex <= 750 - 200 + watcher.get_width() and  #WATCHER BUTTON
                     650 <= mousey <= 650 + watcher.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
