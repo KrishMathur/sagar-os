@@ -19,8 +19,8 @@ def task_colorr(wallpaper_str,color):
     #--------------------------------------------------COLORS
 
 
-    yellow      = (255,255,0,255)
-    green       = (0, 255, 0,255)
+    yellow      = (181, 155, 59,255)
+    green       = (53, 122, 56,255)
     red         = (255, 0, 0,255)
     transparent = (194, 38, 45,0)
     

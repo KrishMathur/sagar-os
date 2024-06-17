@@ -8,6 +8,8 @@ def spotify(wallpaper_str,color):
     import krish_artist
     import srk_artist
     import sys 
+    import srk_zindagi
+    import krish_chill
     pygame.init()
     mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
@@ -81,14 +83,18 @@ def spotify(wallpaper_str,color):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
                     hadis_reckoning.hadis_reckoning(wallpaper_str,color)
+
                 if (960 <= mousex <= 960 + pyar_hai_meri_zindagi.get_width() and  #SHAH ALBUM
                     600 <= mousey <= 600 + pyar_hai_meri_zindagi.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                if (960 <= mousex <= 960 + chill_hits.get_width() and  #ARIJIT ALBUM
+                    srk_zindagi.srk_zindagi_album(wallpaper_str,color)
+
+                if (960 <= mousex <= 960 + chill_hits.get_width() and  #
                     700 <= mousey <= 700 + chill_hits.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    krish_chill.krish_chill_album(wallpaper_str,color)
                     
                 #-------------------------------------------------------------------------------
         
