@@ -1,3 +1,8 @@
+"""
+AUTHOR: Krish Mathur
+DESCRIP: THIS IS AN MOCK UP OS CALLED SAGAR OS TO CARRY OUT FUNCTIONS LIKE SETTINGSS, MUSIC, SEARCH, AND GAMES
+DATE: 10/10/2021
+"""
 import pygame 
 from pygame import mixer
 from time import sleep 

@@ -9,6 +9,7 @@ def search_window(wallpaper_str,color):
     import pong_menu
     import searches
     global searchable
+    import space_invaders
 
     from pygame import mixer
 
@@ -59,11 +60,12 @@ def search_window(wallpaper_str,color):
                         if event.key == pygame.K_RETURN:
                             if search_text == "ell" or search_text == "eliott" or search_text == "Eliott":
                                   Eliott.eliott(wallpaper_str,color)
-                            if search_text == "TV" or search_text == "Gargtv" or search_text == "Youtube":
-                                 youtube.youtube(wallpaper_str,color)
                             if search_text == "pong" or search_text == "Pong" or search_text == "Ping-Pong":
                                 pygame.mixer.music.stop()
                                 pong_menu.ping_pong_menu(wallpaper_str,color)
+                            if search_text == "space invaders" or search_text == "Space Invaders" or search_text == "space" or search_text == "invaders":
+                                pygame.mixer.music.stop()
+                                space_invaders.space_invade(wallpaper_str,color)
                         #-------------------------------------------------------------HANDLES THE INPUT FOR TYPING
                         if event.key == pygame.K_BACKSPACE:
                             search_text = search_text[:-1] #delete one from prhase
@@ -106,7 +108,13 @@ def search_window(wallpaper_str,color):
                 
                 if (1020 <= mousex <= 1020 + enter.get_width() and 
                     600 <= mousey <= 600 + enter.get_height() and search_text == "pong" or search_text == "Pong" or search_text == "Ping-Pong"):
+                    mixer.music.stop()
                     pong_menu.ping_pong_menu(wallpaper_str,color)
+                if (1020 <= mousex <= 1020 + enter.get_width() and 
+                    600 <= mousey <= 600 + enter.get_height() and search_text == "space invaders" or search_text == "Space Invaders" or search_text == "space" or search_text == "invaders"):
+                    mixer.music.stop()
+                    space_invaders.space_invade(wallpaper_str,color)
+
                      
         
             #-----------------------------------------------------------------------------------

@@ -52,24 +52,30 @@ def srk_zindagi_album(wallpaper_str,color):
                     srk_artist.srk_artist (wallpaper_str,color)
                 #------------------------------------------
                 #--------------------------------------------------------------------------------------------------MUSIC BUTTONS
-                if (750 - 200 <= mousex <= 750 - 200 + kahoon.get_width() and  #FEEL IT BUTTON
+                if (750 - 200 <= mousex <= 750 - 200 + kahoon.get_width() and  
                     450 <= mousey <= 450 + kahoon.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/ZINDAGI/main agar kahooon.mp3")
+                    mixer.music.play()
                     
 
-                if (750 - 200 <= mousex <= 750 - 200 + tumhi.get_width() and  #LIFE BUTTON
+                if (750 - 200 <= mousex <= 750 - 200 + tumhi.get_width() and  
                     550 <= mousey <= 550 + tumhi.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/ZINDAGI/tumhi_dekho.mp3")
+                    mixer.music.play()
                    
               
 
                     print("PONDER BUTTON PRESSED")
-                if (750 - 200 <= mousex <= 750 - 200 + manwa.get_width() and  #LOSE BUTTON
+                if (750 - 200 <= mousex <= 750 - 200 + manwa.get_width() and  
                     650 <= mousey <= 650 + manwa.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/ZINDAGI/manwa_lage.mp3")
+                    mixer.music.play()
                     
                 #--------------------------------------------------------------------------------------------------
 

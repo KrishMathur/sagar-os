@@ -55,12 +55,15 @@ def srk_tum_meri_album(wallpaper_str,color):
                     450 <= mousey <= 450 + tumse.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                    
+                    mixer.music.load("graphics/spotify/srk_artist/TUM MERI/tumse.mp3")
+                    mixer.music.play()
 
                 if (750 - 200 <= mousex <= 750 - 200 + rab_diktha.get_width() and  #LIFE BUTTON
                     550 <= mousey <= 550 + rab_diktha.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/TUM MERI/diktha.mp3")
+                    mixer.music.play()
                    
               
 
@@ -69,6 +72,8 @@ def srk_tum_meri_album(wallpaper_str,color):
                     650 <= mousey <= 650 + paagal.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/TUM MERI/pagal.mp3")
+                    mixer.music.play()
                     
                 #--------------------------------------------------------------------------------------------------
 

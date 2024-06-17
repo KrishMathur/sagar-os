@@ -55,20 +55,24 @@ def srk_chennai_album(wallpaper_str,color):
                     450 <= mousey <= 450 + _123.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/CHENNAI EXPRESS/dance_floor.mp3")
+                    mixer.music.play()
                     
 
                 if (750 - 200 <= mousex <= 750 - 200 + kanyakumari.get_width() and  #LIFE BUTTON
                     550 <= mousey <= 550 + kanyakumari.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
-                   
-              
+                    mixer.music.load("graphics/spotify/srk_artist/CHENNAI EXPRESS/kashmir_main.mp3")
+                    mixer.music.play()
 
-                    print("PONDER BUTTON PRESSED")
+        
                 if (750 - 200 <= mousex <= 750 - 200 + titli.get_width() and  #LOSE BUTTON
                     650 <= mousey <= 650 + titli.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/CHENNAI EXPRESS/titli.mp3")
+                    mixer.music.play()
                     
                 #--------------------------------------------------------------------------------------------------
 

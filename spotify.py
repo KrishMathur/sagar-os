@@ -7,6 +7,7 @@ def spotify(wallpaper_str,color):
     import hadis_reckoning
     import krish_artist
     import srk_artist
+    import sys 
     pygame.init()
     mixer.init()
     window = pygame.display.set_mode((1500, 1000 ))
@@ -36,7 +37,7 @@ def spotify(wallpaper_str,color):
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                exit()
+                sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 mousex,mousey = pygame.mouse.get_pos()
                 if (1480 - close_window.get_width() <= mousex <= 1480 and  #CLOSE WINDOW BUTTON
