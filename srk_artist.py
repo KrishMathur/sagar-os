@@ -84,18 +84,24 @@ def srk_artist(wallpaper_str, color):
                     450 <= mousey <= 450 + kashmir.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/CHENNAI EXPRESS/kashmir_main.mp3")
+                    mixer.music.play()
                     
 
                 if (890 <= mousex <= 890 + dil.get_width() and 
                     550 <= mousey <= 550 + dil.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/TUM MERI/pagal.mp3")
+                    mixer.music.play()
                     
                 
                 if (890 <= mousex <= 890 + manwa.get_width() and
                     650 <= mousey <= 650 + manwa.get_height()):
                     click = mixer.Sound("graphics/spotify/button_click.mp3")
                     click.play()
+                    mixer.music.load("graphics/spotify/srk_artist/ZINDAGI/manwa_lage.mp3")
+                    mixer.music.play()
                     
                   
                 #---------------------------------------------------------------------------------
