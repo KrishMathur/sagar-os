@@ -136,7 +136,7 @@ def space_invade(wallpaper_str, color):
             b_stat = "ready"
             player_bullet_rect.y = 1500
             mixer.Sound("graphics/space_invaders/explosion.wav").play()
-
+        hit_bottom()
         if hit_bottom():
             window.blit(game_over, (650, 500))
             pygame.display.flip()
@@ -156,6 +156,7 @@ def space_invade(wallpaper_str, color):
         move_enemies()
         draw_enemies()
         increase_enemy_speed()
+        hit_bottom()
 
         pygame.display.flip()
         clock.tick(60)
